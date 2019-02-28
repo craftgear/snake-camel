@@ -1,9 +1,9 @@
-# camel-snake
+# snake-camel
 convert property names from/to camelCase and snake_case
 
 ## Usage
 ```
-import { toCamel, toSnake } from 'camel-snake';
+import { toCamel, toSnake } from 'snake-camel';
 
 toCamel({
   foo_bar: 'foo',

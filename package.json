@@ -1,5 +1,5 @@
 {
-  "name": "camel-snake",
+  "name": "snake-camel",
   "version": "1.0.0",
   "description": "convert object keys from/to camelCase and snake_case",
   "main": "lib/index.js",
