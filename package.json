@@ -1,0 +1,48 @@
+{
+  "name": "camel-snake",
+  "version": "1.0.0",
+  "description": "convert object keys from/to camelCase and snake_case",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --maxWorkers=2 src",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tbd"
+  },
+  "keywords": [
+    "camelCase",
+    "snake_case"
+  ],
+  "author": "Shunsuke Watanabe <craftgear@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.9.5",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.13.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.3.3333"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "built",
+      "<rootdir>/node_modules"
+    ],
+    "cacheDirectory": ".jest/cache"
+  }
+}
