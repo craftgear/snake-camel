@@ -1,6 +1,6 @@
 {
   "name": "snake-camel",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "convert object keys from/to camelCase and snake_case",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:craftgear/camel-snake.git"
+    "url": "git@github.com:craftgear/snake-camel.git"
   },
   "keywords": [
     "camelCase",
