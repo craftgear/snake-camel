@@ -1,9 +1,9 @@
 {
   "name": "snake-camel",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "convert object keys from/to camelCase and snake_case",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --maxWorkers=2 src",
     "build": "tsc --declaration"
