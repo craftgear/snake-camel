@@ -19,9 +19,15 @@ const propertyNameConverter = (converterFn: (s: string) => string) => (data: Any
   const recursive = (obj: AnyObject): AnyObject => {
     const keys = data ? Object.keys(obj) : [];
     return keys.reduce((accum: object, curr: string) => {
+      const propName = curr;
+      const propValue = obj[propName];
       return {
         ...accum,
-        [converterFn(curr)]: detectObject(obj[curr]) ? recursive(obj[curr]) : obj[curr],
+        [converterFn(propName)]: Array.isArray(propValue)
+          ? propValue.map((x) => (detectObject(x) ? recursive(x) : x))
+          : detectObject(propValue)
+          ? recursive(propValue)
+          : propValue,
       };
     }, {});
   };
