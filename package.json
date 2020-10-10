@@ -1,6 +1,6 @@
 {
   "name": "snake-camel",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "convert object keys from/to camelCase and snake_case",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,16 +19,16 @@
   "author": "Shunsuke Watanabe <craftgear@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^24.0.9",
-    "@types/node": "^11.9.5",
-    "babel-jest": "^24.1.0",
-    "jest": "^24.1.0",
-    "prettier": "^1.16.4",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^11.15.31",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
     "ts-jest": "^26.4.1",
-    "tslint": "^5.13.0",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.3.3333"
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^3.9.7"
   },
   "jest": {
     "preset": "ts-jest",
