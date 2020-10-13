@@ -1,6 +1,6 @@
 # snake-camel
 
-[![Actions Status](https://github.com/craftgear/snake-camel/workflows/Node.js%20CI/badge.svg)](https://github.com/craftgear/snake-camel/actions)
+[![Actions Status](https://github.com/craftgear/snake-camel/workflows/ci/badge.svg)](https://github.com/craftgear/snake-camel/actions)
 
 convert property names from/to camelCase and snake_case recursively.
 
