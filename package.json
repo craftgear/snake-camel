@@ -19,7 +19,7 @@
   "author": "Shunsuke Watanabe <craftgear@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^24.9.1",
+    "@types/jest": "^26.0.15",
     "@types/node": "^11.15.31",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
