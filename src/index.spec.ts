@@ -40,3 +40,21 @@ describe('convert object properties', () => {
     expect(toSnake(camelCased)).toEqual(snakeCased);
   });
 });
+
+describe('convert array of objects properties', () => {
+  const camelCased = [
+    { fooBar: 'fooBar', barBaz: 1 },
+    { fooBar: 'foo', quxBar: 'bar' }
+  ];
+  const snakeCased = [
+    { foo_bar: 'fooBar', bar_baz: 1 },
+    { foo_bar: 'foo', qux_bar: 'bar' }
+  ];
+  it('from camelCase to snake_case', () => {
+    expect(toCamel(snakeCased)).toEqual(camelCased);
+  });
+
+  it('from snake_case to camelCase', () => {
+    expect(toSnake(camelCased)).toEqual(snakeCased);
+  });
+});

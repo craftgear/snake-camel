@@ -1,6 +1,7 @@
 type AnyObject = {
   [key: string]: any;
 };
+type Data = AnyObject | AnyObject[];
 
 export const camel = (str: string) => str.replace(/_+(.?)/g, (_, p1) => p1.toUpperCase());
 export const snake = (str: string) =>
@@ -15,7 +16,7 @@ const detectObject = (obj: any) => {
   return false;
 };
 
-const propertyNameConverter = (converterFn: (s: string) => string) => (data: AnyObject): object => {
+const propertyNameConverter = (converterFn: (s: string) => string) => <P extends Data>(data: P): P => {
   const recursive = (obj: AnyObject): AnyObject => {
     const keys = data ? Object.keys(obj) : [];
     return keys.reduce((accum: object, curr: string) => {
@@ -31,7 +32,7 @@ const propertyNameConverter = (converterFn: (s: string) => string) => (data: Any
       };
     }, {});
   };
-  return recursive(data);
+  return recursive({ key: data }).key;
 };
 
 export const toSnake = propertyNameConverter(snake);
