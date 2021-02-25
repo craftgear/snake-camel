@@ -1,6 +1,6 @@
 {
   "name": "snake-camel",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "convert object keys from/to camelCase and snake_case",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
