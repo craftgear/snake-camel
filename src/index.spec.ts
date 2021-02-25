@@ -32,12 +32,23 @@ describe('convert object properties', () => {
     },
     baz_qux: [{ baz_foo: 1 }, { qux_bar: { foo_foo: 2 } }, true, 1, 'fooBar', 'barBaz'],
   };
+
   it('from camelCase to snake_case', () => {
     expect(toCamel(snakeCased)).toEqual(camelCased);
   });
 
   it('from snake_case to camelCase', () => {
     expect(toSnake(camelCased)).toEqual(snakeCased);
+  });
+
+  it('handles an array of non-object values accordingly ', () => {
+    const nonObjectValues = [true, false, undefined, null, 1, 'str'];
+    const snakeWithNonObjects = [...nonObjectValues, snakeCased];
+    const camelWithNonObjects = [...nonObjectValues, camelCased];
+    expect(snakeWithNonObjects.map(toCamel)).toEqual(camelWithNonObjects);
+    expect(snakeWithNonObjects.map(toSnake)).toEqual(snakeWithNonObjects);
+    expect(camelWithNonObjects.map(toSnake)).toEqual(snakeWithNonObjects);
+    expect(camelWithNonObjects.map(toCamel)).toEqual(camelWithNonObjects);
   });
 });
 
