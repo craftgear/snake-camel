@@ -12,12 +12,7 @@ export const snake: Converter = (str) =>
     .replace(/(^[A-Z])/, (_, p1) => p1.toLowerCase())
     .replace(/([A-Z]+)/g, (_, p1) => `_${p1.toLowerCase()}`);
 
-const detectObject = (obj: any) => {
-  if (Object.prototype.toString.call(obj) === '[object Object]') {
-    return true;
-  }
-  return false;
-};
+const detectObject = (obj: any) => Object.prototype.toString.call(obj) === '[object Object]';
 
 const propertyNameConverter: NameConverter = (converterFn) => (data) => {
   const recursive: Recursive = (obj) => {
