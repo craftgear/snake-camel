@@ -1,6 +1,6 @@
 {
   "name": "snake-camel",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "convert object keys from/to camelCase and snake_case",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -32,6 +32,11 @@
   },
   "jest": {
     "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    },
     "moduleFileExtensions": [
       "ts",
       "js"
